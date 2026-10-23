@@ -3,7 +3,7 @@
 #define Max_Words 100
 #define Max_Len 50
 
-int splitw(const char *text, char words[][Max_Len])
+int splitw(const char *text, char words[][Max_Len]) // разбор строки на слова
 {
     int count = 0;
     int len = 0;
@@ -35,9 +35,9 @@ int splitw(const char *text, char words[][Max_Len])
             break;
         }
     }
-    return count;
+    return count; // кол-во слов
 }
-int sravWords(const char *a, const char *b)
+int sravWords(const char *a, const char *b) // сравнение слов:
 {
     int i = 0;
     while (a[i] != '\0' && a[i] == b[i])
@@ -46,7 +46,7 @@ int sravWords(const char *a, const char *b)
     }
     return a[i] - b[i];
 }
-void swapw(char *a, char *b)
+void swapw(char *a, char *b) // обмен двух слов местами
 {
     for (int i = 0; i < Max_Len; i++)
     {
@@ -55,7 +55,7 @@ void swapw(char *a, char *b)
         b[i] = hlp;
     }
 }
-void sortw(char words[][Max_Len], int count)
+void sortw(char words[][Max_Len], int count) // пузырек: сортировка слов по алфавиту
 {
     for (int i = 0; i < count - 1; i++)
     {
@@ -68,7 +68,7 @@ void sortw(char words[][Max_Len], int count)
         }
     }
 }
-void printw(char words[][Max_Len], int count)
+void printw(char words[][Max_Len], int count) // вывод слов и их кол-ва
 {
     printf("Слова по алфавиту:\n");
     for (int i = 0; i < count; i++)
