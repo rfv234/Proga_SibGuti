@@ -3,7 +3,7 @@
 #define Max_Words 100
 #define Max_Len 50
 
-int splitw(const char *text, char words[][Max_Len]) // разбор строки на слова
+int splitw(char *text, char words[][Max_Len]) // разбор строки на слова
 {
     int count = 0;
     int len = 0;
@@ -37,7 +37,7 @@ int splitw(const char *text, char words[][Max_Len]) // разбор строки
     }
     return count; // кол-во слов
 }
-int sravWords(const char *a, const char *b) // сравнение слов:
+int sravWords(char *a, char *b) // сравнение слов:
 {
     int i = 0;
     while (a[i] != '\0' && a[i] == b[i])
@@ -55,7 +55,7 @@ void swapw(char *a, char *b) // обмен двух слов местами
         b[i] = hlp;
     }
 }
-void sortw(char words[][Max_Len], int count) // пузырек: сортировка слов по алфавиту
+void sortw(char words[][Max_Len], int count) // сортировка слов по алфавиту
 {
     for (int i = 0; i < count - 1; i++)
     {
@@ -80,7 +80,8 @@ void printw(char words[][Max_Len], int count) // вывод слов и их к�
 
 int main()
 {
-    char text[] = "orange apple banana kiwi";
+    char text[100] = "qwerty 123 apple banana kiwi";
+    
     char words[Max_Words][Max_Len];
 
     int count = splitw(text, words);
