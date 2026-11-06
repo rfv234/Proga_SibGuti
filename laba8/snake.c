@@ -184,13 +184,12 @@ void step()
         return;
     }
 
-    int eating = (next == food);
-    if (!eating && hits_self(next))
+    if (next != food && hits_self(next))
     {
         game_over = 1;
         return;
     }
-    if (eating)
+    if (next == food)
     {
         int *tmp = realloc(body, (len + 1) * sizeof(*body));
         if (tmp == NULL)
