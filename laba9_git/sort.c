@@ -1,4 +1,4 @@
-void bubble_sort(int a[], int n)
+void bubble_sort(int a[], int n) // сортировка пузырьком
 {
 	for (int i = 0; i < n - 1; i++)
 	{
