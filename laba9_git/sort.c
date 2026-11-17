@@ -14,3 +14,10 @@ void bubble_sort(int a[], int n) // сортировка пузырьком
 	}
 }
 // готовая функция
+
+int main()
+{
+	int a[] = {4,2};
+	bubble_sort(a, 2);
+	return 0;
+}
