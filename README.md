@@ -149,3 +149,35 @@
 Отправка всех изменений ветки `main` на GitHub (`git push origin main`):
 
 ![alt text](/laba9_git/image-35.png)
+
+# Оценка 5
+
+Создание ветки `branch1`, добавление и коммит `file.txt` в обеих ветках с разным содержимым:
+
+![alt text](/laba9_git/image-36.png)
+
+Просмотр общего графа истории (`git log --oneline --graph --all`) — ветки `main` и `branch1` разошлись:
+
+![alt text](/laba9_git/image-37.png)
+
+Слияние `branch1` в `main` (`git merge branch1`), конфликт в `file.txt`, проверка `git status`, исправление в `vim` и коммит:
+
+![alt text](/laba9_git/image-38.png)
+
+Граф коммитов после разрешения конфликта (`git log --oneline --graph`) и отправка изменений (`git push origin main`):
+
+![alt text](/laba9_git/image-39.png)
+
+### Merge-конфликты для сортировки MergeSort на Python
+
+Создание `mergesort.py` (`base.py`) на `main`, коммит `righty.py` в ветке `Mergesort-Impl` и коммит `lefty.py` в ветке `main`:
+
+![alt text](/laba9_git/image-40.png)
+
+Просмотр графа истории коммитов (`git log --oneline --graph`):
+
+![alt text](/laba9_git/image-41.png)
+
+Проверка веток (`git branch`), слияние `Mergesort-Impl` в `main`, разрешение конфликта в `mergesort.py`, коммит и `git push origin main`:
+
+![alt text](/laba9_git/image-42.png)
